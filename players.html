@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Players</title>
+    <style>
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html"><button>Back</button></a>
+    <br>
+    <div class="center-text">
+        <h1>Player Management</h1>
+    </div>
+
+    <h2>Create New Player</h2>
+    <!-- Create Player Form -->
+    <form action="create_players.php" method="post">
+        First Name: <input type="text" name="firstName" required><br><br>
+        Last Name: <input type="text" name="lastName" required><br><br>
+        Team ID: <input type="number" name="teamID" required><br><br>
+        Height (cm): <input type="number" name="height" required><br><br>
+        Weight (kg): <input type="number" name="weight" required><br><br>
+        Position: <input type="text" name="position" required><br><br>
+        Year: <input type="text" name="year" required><br><br>
+        <input type="submit" value="Register Player">
+    </form>
+    <hr>
+
+    <!-- Fetch Player Form -->
+    <h2>Lookup Player</h2>
+    <form action="read_players.php" method="post">
+        Player ID: <input type="number" name="playerID" required><br><br>
+        <input type="submit" value="Fetch Player">
+    </form>
+    <hr>
+
+    <!-- Update Player Form -->
+    <h2>Update Player</h2>
+    <form action="update_players.php" method="post">
+        Player ID (for identification): <input type="number" name="playerID" required><br><br>
+        New First Name: <input type="text" name="newFirstName"><br><br>
+        New Last Name: <input type="text" name="newLastName"><br><br>
+        New Team ID: <input type="number" name="newTeamID"><br><br>
+        New Height (cm): <input type="number" name="newHeight"><br><br>
+        New Weight (kg): <input type="number" name="newWeight"><br><br>
+        New Position: <input type="text" name="newPosition"><br><br>
+        New Year: <input type="text" name="newYear"><br><br>
+        <input type="submit" value="Update Player">
+    </form>
+    <hr>
+
+    <!-- Delete Player Form -->
+    <h2>Delete Player</h2>
+    <form action="delete_players.php" method="post">
+        Player ID (to delete): <input type="number" name="playerID" required><br><br>
+        <input type="submit" value="Delete Player" onclick="return confirm('Are you sure you want to delete this player? This cannot be undone.');">
+    </form>
+</body>
+</html>

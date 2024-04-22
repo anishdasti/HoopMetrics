@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Player Stats</title>
+    <style>
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html"><button>Back</button></a>
+    <br>
+    <div class="center-text">
+        <h1>Player Stats Management</h1>
+    </div>
+
+    <h2>Add Player Stats</h2>
+
+    <!-- Create Player Stats Form -->
+    <form action="create_stats.php" method="post">
+        Game ID: <input type="number" name="gameID" required><br><br>
+        Player ID: <input type="number" name="playerID" required><br><br>
+        Points: <input type="number" name="points" required><br><br>
+        Assists: <input type="number" name="assists" required><br><br>
+        Rebounds: <input type="number" name="rebounds" required><br><br>
+        Steals: <input type="number" name="steals" required><br><br>
+        Blocks: <input type="number" name="blocks" required><br><br>
+        Turnovers: <input type="number" name="turnovers" required><br><br>
+        <input type="submit" value="Submit Stats">
+    </form>
+    <hr>
+
+    <!-- Fetch Player Stats Form -->
+    <h2>Lookup Player Stats</h2>
+    <form action="read_stats.php" method="post">
+        Stat ID: <input type="number" name="statID" required><br><br>
+        <input type="submit" value="Fetch Stats">
+    </form>
+    <hr>
+
+    <!-- Update Player Stats Form -->
+    <h2>Update Player Stats</h2>
+    <form action="update_stats.php" method="post">
+        Stat ID (for update): <input type="number" name="statID" required><br><br>
+        New Points: <input type="number" name="newPoints"><br><br>
+        New Assists: <input type="number" name="newAssists"><br><br>
+        New Rebounds: <input type="number" name="newRebounds"><br><br>
+        New Steals: <input type="number" name="newSteals"><br><br>
+        New Blocks: <input type="number" name="newBlocks"><br><br>
+        New Turnovers: <input type="number" name="newTurnovers"><br><br>
+        <input type="submit" value="Update Stats">
+    </form>
+    <hr>
+
+    <!-- Delete Player Stats Form -->
+    <h2>Delete Player Stats</h2>
+    <form action="delete_stats.php" method="post">
+        Stat ID (to delete): <input type="number" name="statID" required><br><br>
+        <input type="submit" value="Delete Stats" onclick="return confirm('Are you sure you want to delete these stats? This cannot be undone.');">
+    </form>
+</body>
+</html>
