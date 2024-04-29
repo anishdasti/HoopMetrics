@@ -27,6 +27,8 @@
         Weight (kg): <input type="number" name="weight" required><br><br>
         Position: <input type="text" name="position" required><br><br>
         Year: <input type="text" name="year" required><br><br>
+        Address: <input type="text" name="address" required><br><br> <!-- New field for address -->
+        GPA: <input type="text" name="gpa" required pattern="^\d*(\.\d{0,2})?$" title="GPA must be a decimal number with up to two decimal places."><br><br> <!-- New field for GPA -->
         <input type="submit" value="Register Player">
     </form>
     <hr>
@@ -35,6 +37,7 @@
     <h2>Lookup Player</h2>
     <form action="read_players.php" method="post">
         Player ID: <input type="number" name="playerID" required><br><br>
+        Password: <input type="text" name="password" required><br><br> <!-- New password field for verification -->
         <input type="submit" value="Fetch Player">
     </form>
     <hr>
@@ -50,6 +53,9 @@
         New Weight (kg): <input type="number" name="newWeight"><br><br>
         New Position: <input type="text" name="newPosition"><br><br>
         New Year: <input type="text" name="newYear"><br><br>
+        Address: <input type="text" name="address" required><br><br> <!-- New field for address -->
+        GPA: <input type="text" name="gpa" required pattern="^\d*(\.\d{0,2})?$" title="GPA must be a decimal number with up to two decimal places."><br><br> <!-- New field for GPA -->
+        Password: <input type="text" name="password" required><br><br> <!-- New password field for verification -->
         <input type="submit" value="Update Player">
     </form>
     <hr>
